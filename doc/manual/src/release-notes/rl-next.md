@@ -14,3 +14,7 @@
 
 * `nix build` has a new `--print-out-paths` flag to print the resulting output paths.
   This matches the default behaviour of `nix-build`.
+
+* When searching upwards for the root of the flake, Nix doesn’t consider
+  anything that’s not owned by the current user anymore as it’s a
+  security hazard.
